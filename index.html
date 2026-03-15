@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAI Events</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <a href="#home" class="header__logo" aria-label="SAI Events home">
+          <img src="assets/logo.png" alt="SAI Events" width="164" height="149" />
+        </a>
+        <nav class="header__nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#events">Events</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a
+          href="tel:+917801919073"
+          class="btn btn--primary btn--small header__cta"
+        >
+          Call Now
+        </a>
+      </header>
+
+      <main>
+        <section id="home" class="hero">
+          <div class="hero__content">
+            <p class="hero__eyebrow">Premium Event Management</p>
+            <h1 class="hero__title">
+              Making your
+              <span>dream events</span>
+              come to life.
+            </h1>
+            <p class="hero__subtitle">
+              From intimate gatherings to grand celebrations, we design, plan, and
+              execute events that feel effortless and unforgettable.
+            </p>
+            <div class="hero__actions">
+              <button
+                class="btn btn--primary"
+                type="button"
+                data-scroll-target="#contact"
+              >
+                Get Started
+              </button>
+              <button class="btn btn--ghost"type="button"
+                data-scroll-target="#events">View Portfolio</button>
+            </div>
+            <div class="hero__stats">
+              <div class="stat">
+                <div class="stat__value">200+</div>
+                <div class="stat__label">Events Curated</div>
+              </div>
+              <div class="stat">
+                <div class="stat__value">4.9</div>
+                <div class="stat__label">Client Rating</div>
+              </div>
+              <div class="stat">
+                <div class="stat__value">6+</div>
+                <div class="stat__label">Years Experience</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <div class="hero__image hero__image--main"></div>
+            <div class="hero__image hero__image--secondary"></div>
+          </div>
+        </section>
+
+        <section id="about" class="section section--split section--about-founder">
+          <div class="section__visual section__visual--founder">
+            <div class="about__image about__image--main"></div>
+          </div>
+          <div class="section__content section__content--founder">
+            <p class="section__eyebrow section__eyebrow--founder">About Founder</p>
+            <h2 class="section__title section__title--founder">
+              Hi! we’ve been a professional event planner and over 6 years of
+              experience. We specialise in wedding, parties and corporate events!
+            </h2>
+            <a href="about-founder.html" class="btn btn--primary btn--founder">About</a>
+          </div>
+        </section>
+
+        <section id="services" class="section section--muted">
+          <div class="section__header">
+            <p class="section__eyebrow">What we do</p>
+            <h2 class="section__title">End-to-end event solutions</h2>
+            <p class="section__subtitle">
+              A full-service partner for planning, design, and production.
+            </p>
+          </div>
+          <div class="grid grid--services">
+            <article class="card card--service">
+              <div class="card__image card__image--wedding"></div>
+              <h3>Wedding Experiences</h3>
+              <p>
+                Concept to execution for destination and city weddings with
+                thoughtful details.
+              </p>
+            </article>
+            <article class="card card--service">
+              <div class="card__image card__image--corporate"></div>
+              <h3>Corporate Events</h3>
+              <p>
+                Product launches, offsites, conferences, and experiences that
+                reflect your brand.
+              </p>
+            </article>
+            <article class="card card--service">
+              <div class="card__image card__image--birthday"></div>
+              <h3>Birthday & Celebrations</h3>
+              <p>
+                Birthdays, anniversaries, and private parties styled to your
+                personality.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--muted section--copy">
+          <div class="section__header section__header--copy">
+            <h2 class="section__title section__title--accent">
+              Not Just Limited Here…
+            </h2>
+          </div>
+          <div class="section__copy-body">
+            <p>
+              Life isn’t made up of just big milestones — it’s built from small,
+              beautiful moments that deserve to be celebrated too.
+            </p>
+            <p>
+              Bought your dream car? That first parking spot should feel like a
+              red-carpet moment. Festival around the corner? Let’s fill your space
+              with lights, colors, and pure festive joy. Planning a fresher’s party
+              or a farewell? We’ll create a night that feels just as special as the
+              memories you’re making.
+            </p>
+            <p>
+              At Sai Events, we believe no celebration is “small.” If it matters to
+              you, it matters to us. From cozy family gatherings to lively college
+              events, from festive décor to personal milestones — we put our heart
+              into every detail.
+            </p>
+            <p class="section__copy-emphasis">
+              Because for us, it’s simple: <br />
+              Your vision. Our mission. <br />
+              You imagine it. We bring it to life — beautifully.
+            </p>
+          </div>
+        </section>
+
+        <section id="events" class="section">
+          <div class="section__header section__header--row">
+            <div>
+              <h2 class="section__title">Recent Events</h2>
+            </div>
+          </div>
+          <div class="grid grid--events">
+            <article class="card card--event">
+              <div class="card__image card__image--event-holi"></div>
+              <div class="card__body">
+                <h3>Holi Party</h3>
+                <a href="holi-party.html" class="btn btn--ghost btn--small card__view">
+                  View
+                </a>
+              </div>
+            </article>
+            <article class="card card--event">
+              <div class="card__image card__image--event-kankotri"></div>
+              <div class="card__body">
+                <h3>Kankotri Lekhan</h3>
+                <a href="kankotri-lekhan.html" class="btn btn--ghost btn--small card__view">
+                  View
+                </a>
+              </div>
+            </article>
+            <article class="card card--event">
+              <div class="card__image card__image--event-destination"></div>
+              <div class="card__body">
+                <h3>Destination Wedding</h3>
+                <a
+                  href="destination-wedding.html"
+                  class="btn btn--ghost btn--small card__view"
+                >
+                  View
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="section section--muted section--contact">
+          <div class="section__header">
+            <p class="section__eyebrow">Let’s plan together</p>
+            <h2 class="section__title">Share your event details</h2>
+            <p class="section__subtitle">
+              Tell us about your date, city, and dream experience. We’ll get back
+              within 24 hours.
+            </p>
+          </div>
+          <form class="form" id="contact-form">
+            <div class="form__row">
+              <div class="form__field">
+                <label for="name">Full name</label>
+                <input id="name" type="text" placeholder="Enter your name" />
+              </div>
+              <div class="form__field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" />
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__field">
+                <label for="date">Event date</label>
+                <input id="date" type="date" />
+              </div>
+              <div class="form__field">
+                <label for="city">City</label>
+                <input id="city" type="text" placeholder="e.g. vadodara" />
+              </div>
+            </div>
+            <div class="form__field">
+              <label for="type">Event type</label>
+              <select id="type">
+                <option>Wedding</option>
+                <option>Corporate</option>
+                <option>Social / Private</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label for="details">Tell us about your event</label>
+              <textarea
+                id="details"
+                rows="4"
+                placeholder="Share your ideas, scale, and preferences..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary form__submit">
+              Submit enquiry
+            </button>
+            <p
+              id="form-message"
+              class="form__message"
+              aria-live="polite"
+              hidden
+            ></p>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__brand">SAI Events</p>
+        <p class="footer__meta">Curating timeless experiences.</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
