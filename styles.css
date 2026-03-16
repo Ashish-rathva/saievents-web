@@ -1,0 +1,1136 @@
+:root {
+  /* Figma: White & Orange palette */
+  --bg: #fffefb;
+  --bg-elevated: #ffffff;
+  --bg-muted: #f5f0e8;
+  --accent: #bf9350;
+  --accent-soft: rgba(232, 93, 4, 0.12);
+  --accent-strong: rgba(232, 93, 4, 0.2);
+  --text: #1a1a1a;
+  --text-soft: #6b6b6b;
+  --border-subtle: #e8e4dc;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 24px 60px rgba(26, 26, 26, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 32px auto 40px;
+  padding: 0 20px;
+}
+
+.page--holi {
+  max-width: 1200px;
+}
+
+@media (min-width: 1280px) {
+  .page {
+    margin-top: 48px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  background: var(--bg-elevated);
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 24px rgba(26, 26, 26, 0.06);
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+}
+
+.holi-page {
+  background: #f3ede5;
+}
+
+.page--holi .header {
+  background: #fefaf4;
+}
+
+/* Logo: Figma component 164×149 */
+.header__logo {
+  display: block;
+  line-height: 0;
+}
+
+.header__logo img {
+  display: block;
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header__nav {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+}
+
+.header__nav a {
+  color: var(--text-soft);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.18s ease;
+}
+
+.header__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.18s ease;
+}
+
+.header__nav a:hover {
+  color: var(--text);
+}
+
+.header__nav a:hover::after {
+  width: 100%;
+}
+
+.header__cta {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-inline: 16px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  padding: 32px 26px 36px;
+  border-radius: 32px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 24px 18px 26px;
+  }
+}
+
+.hero__eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.hero__title {
+  font-size: clamp(30px, 3.3vw, 38px);
+  line-height: 1.15;
+  margin: 0 0 14px;
+}
+
+.hero__title span {
+  color: var(--accent);
+}
+
+.hero__subtitle {
+  margin: 0 0 22px;
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 520px) {
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.btn {
+  border-radius: var(--radius-pill);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn--primary {
+  color: #ffffff;
+  background: var(--accent);
+  box-shadow: 0 8px 24px rgba(232, 93, 4, 0.35);
+}
+
+.btn--ghost {
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+}
+
+.btn--small {
+  padding-block: 8px;
+  font-size: 12px;
+}
+
+.hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.stat {
+  min-width: 110px;
+}
+
+.stat__value {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.stat__label {
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+/* Hero picture: Figma 506×279 */
+.hero__visual {
+  position: relative;
+  width: 100%;
+  max-width: 506px;
+  height: 279px;
+  justify-self: end;
+}
+
+.hero__image {
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero__image--main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 506px;
+  height: 279px;
+  max-width: 100%;
+  max-height: 100%;
+  background-image: url("assets/hero-18-85.png");
+}
+
+.hero__image--secondary {
+  display: none;
+}
+
+.hero__badge {
+  position: absolute;
+  left: -6%;
+  bottom: -6%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 70%;
+}
+
+.hero__badge-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-soft);
+}
+
+.hero__badge-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero__badge-meta {
+  font-size: 11px;
+  color: var(--text-soft);
+}
+
+@media (max-width: 900px) {
+  .hero__visual {
+    order: -1;
+    min-height: 220px;
+  }
+
+  .hero__image--secondary {
+    display: none;
+  }
+
+  .hero__badge {
+    left: auto;
+    right: 4%;
+  }
+}
+
+.section {
+  padding-inline: 6px;
+}
+
+.section--muted {
+  background: var(--bg-muted);
+  border-radius: 28px;
+  padding: 30px 26px 32px;
+  border: 1px solid var(--border-subtle);
+}
+
+.section--copy {
+  margin-top: 32px;
+}
+
+.section__header--copy {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.section__title--accent {
+  color: var(--accent);
+  font-size: 32px;
+}
+
+.section__copy-body {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section__copy-emphasis {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.section__header--row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+}
+
+.section__eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin: 0 0 6px;
+}
+
+.section__title {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.section__title span {
+  color: var(--accent);
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid--services {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid--events {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 960px) {
+  .grid--services,
+  .grid--events {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid--services,
+  .grid--events {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.card {
+  border-radius: var(--radius-md);
+  padding: 18px 18px 20px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+.card--service h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.card--service p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.card--event {
+  padding: 12px 12px 14px;
+}
+
+/* Service/event card images: Figma 314×314 */
+.card__image,
+.card__image--service {
+  position: relative;
+  width: 100%;
+  height: 314px;
+  max-width: 314px;
+  margin: 0 auto 12px;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid var(--border-subtle);
+}
+
+.card__image--wedding {
+  background-image: url("assets/services-wedding-24-192.png");
+}
+
+.card__image--corporate {
+  background-image: url("assets/services-corporate-24-195.png");
+}
+
+.card__image--birthday {
+  background-image: url("assets/services-birthday-24-196.png");
+}
+
+.card__image--event-holi {
+  background-image: url("assets/events-holi-26-200.png");
+}
+
+.card__image--event-kankotri {
+  background-image: url("assets/events-kankotri-27-202.png");
+}
+
+.card__image--event-destination {
+  background-image: url("assets/events-destination-28-204.png");
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card__eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin: 0;
+}
+
+.card__body h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.card__meta {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+.section--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  padding: 10px 6px 0;
+}
+
+@media (max-width: 900px) {
+  .section--split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.section__content {
+  padding-right: 16px;
+}
+
+.section__visual {
+  position: relative;
+  padding: 16px 6px;
+}
+
+.section--about-founder {
+  margin-top: 40px;
+}
+
+.section__visual--founder {
+  display: flex;
+  justify-content: center;
+}
+
+.about__image--main {
+  position: relative;
+  width: 356px;
+  max-width: 100%;
+  height: 466px;
+  border-radius: 20px;
+  background-image: url("assets/founder-24-198.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+.section__content--founder {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.section__eyebrow--founder {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.section__title--founder {
+  font-size: 20px;
+  max-width: 520px;
+}
+
+.btn--founder {
+  padding-inline: 32px;
+}
+
+.about__card {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(25%);
+  width: min(260px, 80%);
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+.about__card-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-soft);
+  margin: 0 0 4px;
+}
+
+.about__card-quote {
+  font-size: 13px;
+  margin: 0 0 4px;
+}
+
+.about__card-meta {
+  font-size: 11px;
+  color: var(--text-soft);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .about__card {
+    position: static;
+    transform: none;
+    margin-top: 14px;
+    width: 100%;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+
+.list--check li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.list--check li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 11px;
+  color: var(--accent);
+}
+
+.section--contact {
+  margin-top: 38px;
+}
+
+.form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .form__row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form__field label {
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+.form__field input,
+.form__field select,
+.form__field textarea {
+  background: var(--bg-elevated);
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  padding: 8px 10px;
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+}
+
+.form__field input::placeholder,
+.form__field textarea::placeholder {
+  color: rgba(148, 163, 184, 0.8);
+}
+
+.form__field input:focus,
+.form__field select:focus,
+.form__field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-soft);
+}
+
+.form__submit {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.card__view {
+  margin-top: 8px;
+}
+
+/* Holi Party detail page */
+.holi {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 16px;
+}
+
+.holi__hero {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.holi__hero-image {
+  height: 320px;
+  background-image: url("assets/events-holi-26-200.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.holi__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.holi__intro-text {
+  max-width: 720px;
+}
+
+.holi__eyebrow {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+.holi__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.3;
+  color: #9a5151;
+}
+
+.holi__intro-image {
+  height: 360px;
+  border-radius: 24px;
+  background-image: url("assets/holi-33-225.png");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--border-subtle);
+}
+
+.holi__detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.holi__detail-image {
+  height: 380px;
+  border-radius: 24px;
+  background-image: url("assets/holi-33-223.png");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--border-subtle);
+}
+
+.holi__detail-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #9a5151;
+}
+
+/* Destination Wedding detail page */
+.dw {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 16px;
+}
+
+.dw__hero {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.dw__hero-image {
+  height: 320px;
+  background-image: url("assets/dw-37-249.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.dw__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 28px 32px;
+  border: 1px solid var(--border-subtle);
+}
+
+.dw__intro-image {
+  height: 360px;
+  border-radius: 24px;
+  background-image: url("assets/events-destination-28-204.png");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--border-subtle);
+}
+
+.dw__intro-text {
+  max-width: 720px;
+  text-align: center;
+}
+
+.dw__title {
+  margin: 0 0 14px;
+  font-size: 30px;
+  line-height: 1.3;
+  color: #9a5151;
+}
+
+.dw__subtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #9a5151;
+}
+
+.dw__gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+.dw__gallery-item {
+  border-radius: 24px;
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid var(--border-subtle);
+}
+
+.dw__gallery-item--large {
+  grid-row: span 2;
+}
+
+.dw__gallery-image {
+  border-radius: 18px;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+}
+
+.dw__gallery-image--1 {
+  height: 540px;
+  background-image: url("assets/dw-37-251.png");
+}
+
+.dw__gallery-image--2 {
+  height: 250px;
+  background-image: url("assets/dw-37-250.png");
+}
+
+.dw__gallery-image--3 {
+  height: 250px;
+  background-image: url("assets/dw-37-248.png");
+}
+
+.dw__gallery-image--4 {
+  height: 250px;
+  background-image: url("assets/events-destination-28-204.png");
+}
+
+@media (max-width: 900px) {
+  .dw__intro {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 28px 24px;
+  }
+
+  .dw__intro-image {
+    height: 300px;
+  }
+
+  .dw__gallery {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+
+  .dw__gallery-item--large {
+    grid-row: span 1;
+  }
+
+  .dw__gallery-image--1 {
+    height: 320px;
+  }
+
+  .dw__gallery-image--2,
+  .dw__gallery-image--3 {
+    height: 220px;
+  }
+
+  .dw__gallery-item {
+    padding: 8px;
+  }
+
+  .holi__intro,
+  .holi__detail {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .holi__intro-image,
+  .holi__detail-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .dw__intro {
+    padding: 20px 16px;
+  }
+
+  .dw__intro-image {
+    height: 240px;
+  }
+
+  .dw__title {
+    font-size: 24px;
+  }
+
+  .dw__subtitle {
+    font-size: 14px;
+  }
+
+  .dw__gallery {
+    gap: 12px;
+  }
+
+  .dw__gallery-item {
+    padding: 6px;
+    border-radius: 16px;
+  }
+
+  .dw__gallery-image {
+    border-radius: 12px;
+  }
+
+  .dw__gallery-image--1 {
+    height: 280px;
+  }
+
+  .dw__gallery-image--2,
+  .dw__gallery-image--3 {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dw__intro {
+    padding: 16px 12px;
+  }
+
+  .dw__intro-image {
+    height: 200px;
+  }
+
+  .dw__title {
+    font-size: 20px;
+  }
+
+  .dw__gallery {
+    gap: 10px;
+  }
+
+  .dw__gallery-item {
+    padding: 6px;
+  }
+
+  .dw__gallery-image--1 {
+    height: 240px;
+  }
+
+  .dw__gallery-image--2,
+  .dw__gallery-image--3 {
+    height: 160px;
+  }
+}
+
+.form__message {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.footer {
+  margin-top: 52px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--text-soft);
+}
+
+@media (max-width: 640px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+
+/* Kankotri Lekhan detail page */
+.kl {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 16px;
+}
+
+.kl__hero {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.kl__hero-image {
+  height: 320px;
+  background-image: url("assets/events-kankotri-27-202.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.kl__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.kl__intro-text {
+  max-width: 720px;
+}
+
+.kl__eyebrow {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+.kl__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.3;
+  color: #9a5151;
+}
+
+.kl__intro-image {
+  height: 360px;
+  border-radius: 24px;
+  background-image: url("assets/events-kankotri-27-202.png");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--border-subtle);
+}
+
+.kl__detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.kl__detail-image {
+  height: 380px;
+  border-radius: 24px;
+  background-image: url("assets/events-kankotri-27-202.png");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--border-subtle);
+}
+
+.kl__detail-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #9a5151;
+}
+
+@media (max-width: 900px) {
+  .kl__intro,
+  .kl__detail {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .kl__intro-image,
+  .kl__detail-image {
+    order: -1;
+  }
+}
+
