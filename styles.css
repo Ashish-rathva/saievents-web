@@ -816,7 +816,7 @@ main {
 }
 
 .dw__hero-image {
-  height: 320px;
+  height: 350px;
   background-image: url("assets/dw-37-249.png");
   background-size: cover;
   background-position: center;
@@ -892,17 +892,17 @@ main {
 }
 
 .dw__gallery-image--2 {
-  height: 250px;
+  height: 350px;
   background-image: url("assets/dw-37-250.png");
 }
 
 .dw__gallery-image--3 {
-  height: 250px;
+  height: 350px;
   background-image: url("assets/dw-37-248.png");
 }
 
 .dw__gallery-image--4 {
-  height: 250px;
+  height: 350px;
   background-image: url("assets/events-destination-28-204.png");
 }
 
