@@ -1133,4 +1133,50 @@ main {
     order: -1;
   }
 }
+/* Hamburger icon style */
+.hamburger {
+  display: none;                    /* hidden on desktop */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
 
+.hamburger .bar {
+  width: 28px;
+  height: 3px;
+  background-color: #f5f0e8;           /* change to your text color if needed */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px){
+  .header__nav {                      /* ←←← CHANGE this to your actual class name for the links */
+    display: none !important;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* When menu is open */
+  .header__nav.active {               /* ←←← CHANGE this to your actual class name */
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;                        /* right below the top bar */
+    left: 0;
+    width: 100%;
+    background-color: #f5f0e8;
+    padding: 20px 0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    align-items: center;
+  }
+
+  .header__nav.active li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+}

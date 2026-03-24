@@ -67,4 +67,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// Mobile hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.header__nav');   // ←←← CHANGE to your actual class
 
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Optional: animate the hamburger to X
+    hamburger.classList.toggle('active');
+  });
+}
