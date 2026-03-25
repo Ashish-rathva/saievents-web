@@ -219,3 +219,72 @@ document.addEventListener('DOMContentLoaded', () => {
   updateDots();
   startAutoSlide();
 });
+
+// Number animation for stats
+document.addEventListener('DOMContentLoaded', () => {
+  const statValues = document.querySelectorAll('.stat__value');
+  let hasAnimated = false;
+
+  const animateNumber = (element) => {
+    const textContent = element.textContent.trim();
+    let targetValue;
+    let hasPlus = textContent.includes('+');
+    let isDecimal = textContent.includes('.');
+
+    // Extract numeric value
+    if (hasPlus) {
+      targetValue = parseFloat(textContent.replace('+', ''));
+    } else {
+      targetValue = parseFloat(textContent);
+    }
+
+    const startValue = 0;
+    const duration = 1500; // animation duration in ms
+    const startTime = performance.now();
+
+    const animate = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const currentValue = progress * (targetValue - startValue) + startValue;
+
+      let displayValue;
+      if (isDecimal) {
+        displayValue = currentValue.toFixed(1);
+      } else {
+        displayValue = Math.round(currentValue);
+      }
+
+      if (hasPlus) {
+        element.textContent = displayValue + '+';
+      } else {
+        element.textContent = displayValue;
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  };
+
+  // Use Intersection Observer to trigger animation when stats come into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !hasAnimated) {
+        hasAnimated = true;
+        statValues.forEach((stat) => {
+          animateNumber(stat);
+        });
+        observer.disconnect();
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  const statsContainer = document.querySelector('.hero__stats');
+  if (statsContainer) {
+    observer.observe(statsContainer);
+  }
+});

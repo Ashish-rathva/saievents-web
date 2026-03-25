@@ -64,6 +64,12 @@ body {
   position: sticky;
   top: 12px;
   z-index: 10;
+  transition: all 0.28s ease;
+}
+
+.header:hover {
+  box-shadow: 0 6px 28px rgba(26, 26, 26, 0.1);
+  border-color: var(--accent-soft);
 }
 
 .holi-page {
@@ -98,7 +104,7 @@ body {
   text-decoration: none;
   position: relative;
   padding-bottom: 2px;
-  transition: color 0.18s ease;
+  transition: color 0.28s ease;
 }
 
 .header__nav a::after {
@@ -109,7 +115,7 @@ body {
   width: 0;
   height: 2px;
   background: var(--accent);
-  transition: width 0.18s ease;
+  transition: width 0.28s ease;
 }
 
 .header__nav a:hover {
@@ -150,6 +156,12 @@ main {
   background: var(--bg-muted);
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-soft);
+  transition: all 0.35s ease;
+}
+
+.hero:hover {
+  border-color: var(--accent-soft);
+  box-shadow: 0 28px 64px rgba(26, 26, 26, 0.12);
 }
 
 @media (max-width: 900px) {
@@ -208,6 +220,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 6px;
+  transition: all 0.3s ease;
 }
 
 .btn--primary {
@@ -216,10 +229,22 @@ main {
   box-shadow: 0 8px 24px rgba(232, 93, 4, 0.35);
 }
 
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(232, 93, 4, 0.45);
+}
+
 .btn--ghost {
   color: var(--text);
   background: var(--bg-elevated);
   border: 1px solid var(--border-subtle);
+}
+
+.btn--ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(191, 147, 80, 0.15);
 }
 
 .btn--small {
@@ -240,6 +265,7 @@ main {
 .stat__value {
   font-size: 22px;
   font-weight: 600;
+  transition: all 0.05s ease;
 }
 
 .stat__label {
@@ -263,6 +289,12 @@ main {
   background-repeat: no-repeat;
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-soft);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero:hover .hero__image {
+  transform: scale(1.02);
+  box-shadow: 0 28px 64px rgba(26, 26, 26, 0.15);
 }
 
 .hero__image--main {
@@ -339,6 +371,12 @@ main {
   border-radius: 28px;
   padding: 30px 26px 32px;
   border: 1px solid var(--border-subtle);
+  transition: all 0.35s ease;
+}
+
+.section--muted:hover {
+  border-color: var(--accent-soft);
+  box-shadow: 0 8px 28px rgba(26, 26, 26, 0.08);
 }
 
 .section--copy {
@@ -441,6 +479,13 @@ main {
   background: var(--bg-elevated);
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-soft);
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 72px rgba(26, 26, 26, 0.12);
+  border-color: var(--accent-soft);
 }
 
 .card--service h3 {
@@ -471,6 +516,12 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   border: 1px solid var(--border-subtle);
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card__image,
+.card:hover .card__image--service {
+  transform: scale(1.05);
 }
 
 .card__image--wedding {
@@ -566,6 +617,12 @@ main {
   background-repeat: no-repeat;
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-soft);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.about__image--main:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 68px rgba(26, 26, 26, 0.15);
 }
 
 .section__content--founder {
@@ -602,6 +659,13 @@ main {
   background: var(--bg-elevated);
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.about__card:hover {
+  transform: translateY(20%);
+  box-shadow: 0 12px 32px rgba(26, 26, 26, 0.15);
+  border-color: var(--accent-soft);
 }
 
 .about__card-label {
@@ -700,6 +764,7 @@ main {
   color: var(--text);
   font-size: 13px;
   outline: none;
+  transition: all 0.28s ease;
 }
 
 .form__field input::placeholder,
@@ -711,7 +776,8 @@ main {
 .form__field select:focus,
 .form__field textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent-soft);
+  box-shadow: 0 0 0 3px var(--accent-soft), 0 0 0 1px var(--accent);
+  transform: translateY(-1px);
 }
 
 .form__submit {
@@ -735,6 +801,12 @@ main {
   border-radius: 28px;
   overflow: hidden;
   border: 1px solid var(--border-subtle);
+  transition: all 0.35s ease;
+}
+
+.holi__hero:hover {
+  box-shadow: 0 28px 72px rgba(26, 26, 26, 0.12);
+  border-color: var(--accent-soft);
 }
 
 .holi__hero-image {
@@ -742,6 +814,11 @@ main {
   background-image: url("assets/events-holi-26-200.png");
   background-size: cover;
   background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.holi__hero:hover .holi__hero-image {
+  transform: scale(1.05);
 }
 
 .holi__intro {
@@ -777,6 +854,12 @@ main {
   background-size: cover;
   background-position: center;
   border: 1px solid var(--border-subtle);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.holi__intro:hover .holi__intro-image {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 56px rgba(26, 26, 26, 0.12);
 }
 
 .holi__detail {
@@ -793,6 +876,12 @@ main {
   background-size: cover;
   background-position: center;
   border: 1px solid var(--border-subtle);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.holi__detail:hover .holi__detail-image {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 56px rgba(26, 26, 26, 0.12);
 }
 
 .holi__detail-text {
@@ -813,6 +902,12 @@ main {
   border-radius: 28px;
   overflow: hidden;
   border: 1px solid var(--border-subtle);
+  transition: all 0.35s ease;
+}
+
+.dw__hero:hover {
+  box-shadow: 0 28px 72px rgba(26, 26, 26, 0.12);
+  border-color: var(--accent-soft);
 }
 
 .dw__hero-image {
@@ -820,6 +915,11 @@ main {
   background-image: url("assets/dw-37-249.png");
   background-size: cover;
   background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.dw__hero:hover .dw__hero-image {
+  transform: scale(1.05);
 }
 
 .dw__intro {
@@ -831,6 +931,12 @@ main {
   border-radius: 28px;
   padding: 28px 32px;
   border: 1px solid var(--border-subtle);
+  transition: all 0.35s ease;
+}
+
+.dw__intro:hover {
+  box-shadow: 0 28px 72px rgba(26, 26, 26, 0.12);
+  border-color: var(--accent-soft);
 }
 
 .dw__intro-image {
@@ -840,6 +946,12 @@ main {
   background-size: cover;
   background-position: center;
   border: 1px solid var(--border-subtle);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.dw__intro:hover .dw__intro-image {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 56px rgba(26, 26, 26, 0.12);
 }
 
 .dw__intro-text {
@@ -873,6 +985,13 @@ main {
   background: #ffffff;
   padding: 10px;
   border: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+}
+
+.dw__gallery-item:hover {
+  box-shadow: 0 16px 48px rgba(26, 26, 26, 0.12);
+  border-color: var(--accent-soft);
+  transform: translateY(-3px);
 }
 
 .dw__gallery-item--large {
@@ -884,6 +1003,11 @@ main {
   height: 260px;
   background-size: cover;
   background-position: center;
+  transition: transform 0.35s ease;
+}
+
+.dw__gallery-item:hover .dw__gallery-image {
+  transform: scale(1.03);
 }
 
 .dw__gallery-image--1 {
@@ -1056,6 +1180,12 @@ main {
   border-radius: 28px;
   overflow: hidden;
   border: 1px solid var(--border-subtle);
+  transition: all 0.35s ease;
+}
+
+.kl__hero:hover {
+  box-shadow: 0 28px 72px rgba(26, 26, 26, 0.12);
+  border-color: var(--accent-soft);
 }
 
 .kl__hero-image {
@@ -1063,6 +1193,11 @@ main {
   background-image: url("assets/events-kankotri-27-202.png");
   background-size: cover;
   background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.kl__hero:hover .kl__hero-image {
+  transform: scale(1.05);
 }
 
 .kl__intro {
@@ -1098,6 +1233,12 @@ main {
   background-size: cover;
   background-position: center;
   border: 1px solid var(--border-subtle);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.kl__intro:hover .kl__intro-image {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 56px rgba(26, 26, 26, 0.12);
 }
 
 .kl__detail {
@@ -1114,6 +1255,12 @@ main {
   background-size: cover;
   background-position: center;
   border: 1px solid var(--border-subtle);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.kl__detail:hover .kl__detail-image {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 56px rgba(26, 26, 26, 0.12);
 }
 
 .kl__detail-text {
@@ -1221,6 +1368,12 @@ main {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border-radius: 16px;
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .quote {
@@ -1270,7 +1423,7 @@ main {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.25s ease;
   z-index: 10;
 }
 
@@ -1296,7 +1449,7 @@ main {
   background: #ccc;
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .dot.active {
